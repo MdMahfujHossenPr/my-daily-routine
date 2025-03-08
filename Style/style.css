@@ -1,14 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   color: rgb(0, 0, 0);
   text-shadow: 2px 2px 8px rgba(4, 191, 238, 0.397);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   /* min-height: 100vh; */
   width: 0 auto;
   height: 1080px;
@@ -25,35 +18,17 @@ body {
 }
 
 h1 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  text-shadow: 2px 2px 8px rgba(4, 191, 238, 0.397);
-  animation: glow 2s infinite alternate;
-  font-size: 2.5rem;
+    animation: glow 2s infinite alternate;
 }
 
-@keyframes glow {
+  @keyframes glow {
   from { text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.5); }
   to { text-shadow: 4px 4px 15px rgb(105, 220, 255); }
 }
 
-.routine {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  width: 50%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  max-width: 1920px;
-}
+ 
 
-.hour {
-  background: rgba(4, 233, 241, 0.274);
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  position: relative;
+  .hour {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
@@ -72,81 +47,3 @@ h1 {
   text-shadow: 0px 0px 10px #07e7f78c;
 }
 
-.progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.2);
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background: #07acee;
-  animation: progressAnim 12s linear infinite;
-}
-
-@keyframes progressAnim {
-  from { width: 0%; }
-  to { width: 100%; }
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 14px;
-  text-align: center;
-  opacity: 0.8;
-} 
-
-/* Responsive adjustments */
-@media (max-width:1920px) {
-  .routine {
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .hour {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 1920px) {
-  .routine {
-    grid-template-rows: 1fr;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .hour {
-    padding: 10px;
-  }
-}
-
-@media (min-width: 1920px) {
-  body {
-    font-size: 1.2rem;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  .routine {
-    gap: 20px;
-  }
-
-  .hour {
-    padding: 25px;
-  }
-}
-
-
-
- 
